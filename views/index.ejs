@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>テスト</title>
+</head>
+
+<body>
+<div id = "container">
+    <a href="./newpost">新規投稿</a><br>
+
+    <%for (let i = 0; i < rows.length; i++) { %>
+        <% let row = rows[i] %>
+        <div>
+            <p>
+                <%= row.name %> <a href="./update<%= row.id %>">更新</a> <a href="./delete<%= row.id %>">削除</a><br>
+                <%- row.body.replace(/\n/g, '<br>') %>
+                <%- '<br>' %>
+                投稿：<%- row.createtime %> 最終更新：<%- row.updatetime %>
+            </p>
+        </div>
+    <% } %>
+</div>
+
+</body>
+</html>

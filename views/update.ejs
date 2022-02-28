@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%-new_update%></title>
+</head>
+
+<body>
+<div id = "container">
+    <form action="<%-action%>" method="post">
+        <label for="name">名前</label>
+        <input id="name" name="name" value="<%-oldname%>">
+        <br>
+        <textarea id="body" name="body" cols="50" rows="10" value="a"><%-oldbody%></textarea>
+        <br>
+        <input type="submit" value="送信する">
+    </form>
+</div>
+
+</body>
+</html>
